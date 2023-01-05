@@ -1,5 +1,17 @@
-<ul>
-  <% @restaurants.each do |restaurant| %>
-    <li><%= link_to restaurant.name, restaurant_path(restaurant['id']) %></li>
-  <% end %>
-</ul>
+<div class="container">
+  <h1>Découvrer les meilleurs restaurants :</h1>
+
+  <h2>Catégories :</h2>
+  <p>Chinois</p>
+  <p>Italien</p>
+  <p>Japonais</p>
+  <p>Français</p>
+  <p>Belge</p>
+
+  <h2>Selectionné pour vous :</h2>
+  <ul class="list-group">
+    <% @restaurants.each do |restaurant| %>
+      <li><%= link_to restaurant.name, restaurant_path(restaurant['id']) %></li>
+    <% end %>
+  </ul>
+</div>
