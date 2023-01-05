@@ -1,6 +1,6 @@
 <%= simple_form_for [@restaurant, @review] do |f| %>
 <%= f.input :rating %>
 <%= f.input :content %>
-<%= f.submit %>
+<%= f.submit "Soumettre mon Avis", class:"btn btn-primary" %>
 <% end %>
-<%= link_to "Retour a la page du restaurant", restaurant_path(@restaurant) %>
+<%= link_to "Retour a la page du restaurant", restaurant_path(@restaurant), class:"btn btn-primary" %>

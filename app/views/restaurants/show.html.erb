@@ -1,4 +1,14 @@
 <h2><%= @restaurant.name %></h2>
 <p><%= @restaurant.address %></p>
 
+<%= link_to 'Ajouter un Avis', new_restaurant_review_path(@restaurant) %>
+
+<p><strong>Avis :</strong></p>
+<ul class="list-group">
+  <% @restaurant.reviews.each do |review| %>
+    <li class="list-group-item"><%= review.content %></li>
+  <% end %>
+</ul>
+<br>
+
 <p><%= link_to "Retour à la liste des restaurants", restaurants_path, class: "btn btn-primary" %></p>
